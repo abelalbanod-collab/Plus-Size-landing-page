@@ -1,0 +1,346 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1.25rem;
+    width: 100%;
+    min-height: 7rem;
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(226, 220, 220, 0.863);
+}
+header .brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+header .brand img {
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: contain;
+}
+header h1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+}
+header .menu nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header .menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    transition: color 180ms ease, transform 180ms ease;
+}
+
+header .menu a:hover {
+    color: rgb(36, 69, 82);
+    transform: scale(1.05);
+}
+
+header .header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgb(1, 62, 87);
+    border-radius: 15px;
+    color: rgb(1, 62, 87);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+header .header-cta:hover {
+    color: white;
+    background-color: rgb(1, 62, 87);
+    transform: translateY(-2px);
+}
+
+header .header-cta:focus-visible {
+    outline: 3px solid rgb(0, 183, 255);
+    outline-offset: 3px;
+}
+
+.color-One {
+    color: rgb(243, 192, 23);
+    font-size: 2.5rem;
+
+}
+
+.color-Size {
+    color: rgb(0, 183, 255);
+}
+main.somedetail {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 7rem;
+}
+
+.home-hero {
+    box-sizing: border-box;
+    display: flex;
+    min-height: min(760px, calc(100vh - 7rem));
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5rem clamp(1.5rem, 9vw, 8rem);
+    background-image: linear-gradient(90deg, rgba(10, 31, 43, 0.72), rgba(10, 31, 43, 0.14)), url("../imagem/imagem da sala.jfif");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-eyebrow,
+.section-eyebrow {
+    margin: 0 0 0.8rem;
+    color: #00b7d8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.home-hero h2 {
+    max-width: 720px;
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 5rem;
+    line-height: 1.04;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
+}
+
+.home-hero > p:not(.home-eyebrow) {
+    max-width: 600px;
+    margin: 0 0 1.75rem;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+.home-button:hover {
+    color: #153b56;
+    background-color: #ffffff;
+}
+
+.home-benefits,
+.home-services {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 8vw, 7rem);
+}
+
+.home-benefits {
+    background: #ffffff;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+.section-heading h2,
+.home-contact h2 {
+    margin: 0 0 1rem;
+    color: #153b56;
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    line-height: 1.12;
+}
+
+.section-heading > p:last-child,
+.home-contact p:not(.section-eyebrow) {
+    max-width: 620px;
+    margin: 0;
+    color: #496575;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    padding-top: 1rem;
+    border-top: 2px solid #d8e2e4;
+}
+
+.benefit-number {
+    color: #087da0;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.benefit-item h3 {
+    margin: 1.25rem 0 0.65rem;
+    color: #153b56;
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+}
+
+.benefit-item p {
+    margin: 0;
+    color: #496575;
+    line-height: 1.65;
+}
+
+.service-preview-list {
+    border-top: 1px solid #cbd9dc;
+}
+
+.service-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #cbd9dc;
+    color: #153b56;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 180ms ease, padding 180ms ease;
+}
+
+.service-preview:hover {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #087da0;
+}
+
+.service-preview span:last-child {
+    color: #087da0;
+}
+
+.text-link {
+    display: inline-flex;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    color: #087da0;
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.home-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 8vw, 7rem);
+    background: #153b56;
+}
+
+.home-contact h2,
+.home-contact p:not(.section-eyebrow) {
+    color: #ffffff;
+}
+
+.home-contact .section-eyebrow {
+    color: #70d6e4;
+}
+
+.home-button-light {
+    flex: 0 0 auto;
+    border-color: #ffffff;
+    color: #153b56;
+    background: #ffffff;
+}
+
+.home-button-light:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
+.home-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem clamp(1.5rem, 8vw, 7rem);
+    color: #496575;
+    background: #ffffff;
+    font-size: 0.9rem;
+}
+
+.home-footer span:first-child {
+    color: #153b56;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .home-hero {
+        min-height: min(680px, calc(100svh - 7rem));
+        padding: 4rem 1.5rem;
+    }
+
+    .benefit-list {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .home-contact {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .home-hero > p:not(.home-eyebrow) {
+        font-size: 1rem;
+    }
+
+    .home-hero h2 {
+        font-size: 2.75rem;
+    }
+
+    .section-heading h2,
+    .home-contact h2 {
+        font-size: 2rem;
+    }
+
+    .service-preview {
+        font-size: 1.25rem;
+    }
+
+    .home-footer {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}

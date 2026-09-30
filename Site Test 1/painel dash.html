@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A PlusSize business growth workspace prototype.">
+    <title>Business Dashboard | PlusSize</title>
+    <link rel="stylesheet" href="CSS/deshboard.css">
+    <script src="JS/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="dashboard-shell">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="plussize.HTML">
+                <img src="imagem/PlusSize-icon-Photoroom.png" alt="">
+                <span>PlusSize</span>
+            </a>
+
+            <nav class="sidebar-nav" aria-label="Dashboard navigation">
+                <p class="nav-label">Workspace</p>
+                <a class="nav-link is-active" href="#overview" aria-current="page"><span aria-hidden="true">▦</span> Overview</a>
+                <a class="nav-link" href="#goals"><span aria-hidden="true">◎</span> Goals</a>
+                <a class="nav-link" href="#action-plan"><span aria-hidden="true">☷</span> Action plan</a>
+                <p class="nav-label nav-label-spaced">Company</p>
+                <a class="nav-link" href="services.html"><span aria-hidden="true">↗</span> Services</a>
+                <a class="nav-link" href="contact.html"><span aria-hidden="true">✉</span> Contact advisor</a>
+            </nav>
+
+            <a class="sidebar-back" href="plussize.HTML">← Back to website</a>
+        </aside>
+
+        <main class="dashboard-main" id="overview">
+            <header class="topbar">
+                <div>
+                    <p class="breadcrumb">Workspace <span>/</span> Overview</p>
+                    <p class="workspace-name">Business growth workspace</p>
+                </div>
+                <a class="topbar-link" href="contact.html">Talk to PlusSize <span aria-hidden="true">↗</span></a>
+            </header>
+
+            <div class="page-content">
+                <section class="welcome-row" aria-labelledby="page-title">
+                    <div>
+                        <p class="eyebrow" id="current-date"></p>
+                        <h1 id="page-title">Your business at a glance</h1>
+                        <p class="welcome-copy">A focused view of the numbers, goals, and next steps that move your business forward.</p>
+                    </div>
+                    <label class="period-control" for="report-period">Period
+                        <select id="report-period" aria-label="Reporting period">
+                            <option value="this-month">This month</option>
+                            <option value="last-month">Last month</option>
+                            <option value="this-quarter">This quarter</option>
+                        </select>
+                    </label>
+                </section>
+
+                <p class="demo-notice"><span aria-hidden="true">i</span> Demonstration workspace. Sample figures are for illustration and are not connected to a real business.</p>
+
+                <section class="metric-grid" aria-label="Example business metrics">
+                    <article class="metric-card metric-revenue">
+                        <div class="metric-topline"><span>Revenue</span><span class="metric-icon" aria-hidden="true">↗</span></div>
+                        <p class="metric-value">€24,800</p>
+                        <p class="metric-note"><span class="trend-up">+8.2%</span> vs previous period</p>
+                    </article>
+                    <article class="metric-card metric-costs">
+                        <div class="metric-topline"><span>Operating costs</span><span class="metric-icon" aria-hidden="true">−</span></div>
+                        <p class="metric-value">€13,450</p>
+                        <p class="metric-note"><span class="trend-neutral">Stable</span> vs previous period</p>
+                    </article>
+                    <article class="metric-card metric-profit">
+                        <div class="metric-topline"><span>Net profit</span><span class="metric-icon" aria-hidden="true">+</span></div>
+                        <p class="metric-value">€11,350</p>
+                        <p class="metric-note"><span class="trend-up">+6.4%</span> vs previous period</p>
+                    </article>
+                    <article class="metric-card metric-customers">
+                        <div class="metric-topline"><span>New customers</span><span class="metric-icon" aria-hidden="true">＋</span></div>
+                        <p class="metric-value">18</p>
+                        <p class="metric-note"><span class="trend-up">+3</span> vs previous period</p>
+                    </article>
+                </section>
+
+                <div class="dashboard-columns">
+                    <section class="panel goal-panel" id="goals" aria-labelledby="goal-title">
+                        <div class="panel-heading">
+                            <div>
+                                <p class="eyebrow">Keep your focus</p>
+                                <h2 id="goal-title">Monthly revenue goal</h2>
+                            </div>
+                            <span class="sample-tag">Sample</span>
+                        </div>
+                        <div class="goal-amounts">
+                            <p><strong>€24,800</strong><span>current revenue</span></p>
+                            <label for="goal-target"><span id="goal-period-label">Monthly target</span>
+                                <span class="target-input-wrap">€ <input id="goal-target" type="number" min="1" step="500" value="30000" inputmode="numeric"></span>
+                            </label>
+                        </div>
+                        <div class="progress-track" role="progressbar" aria-label="Revenue goal progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="83">
+                            <span class="progress-fill" id="goal-progress"></span>
+                        </div>
+                        <div class="progress-caption"><span id="goal-percent">83% of target</span><span id="goal-remaining">€5,200 to go</span></div>
+                        <p class="goal-footnote">Change the target to explore how your goal progress updates. This sample is saved in this browser only.</p>
+                    </section>
+
+                    <section class="panel insight-panel" aria-labelledby="insight-title">
+                        <div class="panel-heading">
+                            <div>
+                                <p class="eyebrow">A useful prompt</p>
+                                <h2 id="insight-title">Look beyond revenue</h2>
+                            </div>
+                            <span class="insight-mark" aria-hidden="true">↗</span>
+                        </div>
+                        <p>Revenue is growing in this example. Review operating costs alongside sales to understand whether that growth is improving your margins.</p>
+                        <a href="services.html">Explore growth planning <span aria-hidden="true">→</span></a>
+                    </section>
+                </div>
+
+                <section class="panel action-panel" id="action-plan" aria-labelledby="action-title">
+                    <div class="panel-heading action-heading">
+                        <div>
+                            <p class="eyebrow">Turn plans into progress</p>
+                            <h2 id="action-title">Your action plan</h2>
+                        </div>
+                        <details class="add-task-details">
+                            <summary>＋ Add task</summary>
+                            <form id="task-form" class="task-form">
+                                <label for="task-title">Task description</label>
+                                <input id="task-title" name="task" type="text" maxlength="100" placeholder="e.g. Review monthly expenses" required>
+                                <label for="task-due">Due date</label>
+                                <input id="task-due" name="due" type="date">
+                                <button type="submit">Add to plan</button>
+                            </form>
+                        </details>
+                    </div>
+                    <p class="task-count" id="task-count" aria-live="polite">3 open tasks</p>
+                    <ul class="task-list" id="task-list" aria-label="Action plan tasks">
+                        <li class="task-item" data-task-id="sample-1">
+                            <label class="task-check"><input type="checkbox"><span class="checkmark" aria-hidden="true"></span><span class="task-text">Review monthly cash flow</span></label>
+                            <span class="task-due">Today</span><button class="remove-task" type="button" aria-label="Remove Review monthly cash flow">×</button>
+                        </li>
+                        <li class="task-item" data-task-id="sample-2">
+                            <label class="task-check"><input type="checkbox"><span class="checkmark" aria-hidden="true"></span><span class="task-text">Set next month's sales priorities</span></label>
+                            <span class="task-due">Oct 3</span><button class="remove-task" type="button" aria-label="Remove Set next month's sales priorities">×</button>
+                        </li>
+                        <li class="task-item" data-task-id="sample-3">
+                            <label class="task-check"><input type="checkbox"><span class="checkmark" aria-hidden="true"></span><span class="task-text">Identify one customer follow-up</span></label>
+                            <span class="task-due">Oct 6</span><button class="remove-task" type="button" aria-label="Remove Identify one customer follow-up">×</button>
+                        </li>
+                    </ul>
+                    <p class="task-storage-note">Tasks are stored locally in this browser for this prototype.</p>
+                </section>
+
+                <footer class="dashboard-footer"><span>PlusSize workspace prototype</span><a href="contact.html">Questions? Contact us</a></footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
